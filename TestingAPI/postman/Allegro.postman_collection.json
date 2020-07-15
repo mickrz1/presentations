@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "22b7d0f8-2d99-4b20-b520-8e3cef803b7b",
+		"name": "Allegro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"connection": true,
+					"accept-encoding": true,
+					"user-agent": true,
+					"host": true,
+					"content-length": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTEzOTk4OTAsInVzZXJfbmFtZSI6IjY2ODU2NTIiLCJqdGkiOiJmZDY0ZDU0Yy03ZDgwLTQ1OGEtYmNkNy01NmQwNWM3ZDY4YjMiLCJjbGllbnRfaWQiOiIyYzU4NTZhYmFkNWY0ZGFmYTBiZmM4MjJmNDFkNWY5YiIsInNjb3BlIjpbImFsbGVncm86YXBpOm9yZGVyczpyZWFkIiwiYWxsZWdybzphcGk6cHJvZmlsZTp3cml0ZSIsImFsbGVncm86YXBpOnNhbGU6b2ZmZXJzOndyaXRlIiwiYWxsZWdybzphcGk6YmlsbGluZzpyZWFkIiwiYWxsZWdybzphcGk6Y2FtcGFpZ25zIiwiYWxsZWdybzphcGk6ZGlzcHV0ZXMiLCJhbGxlZ3JvOmFwaTpiaWRzIiwiYWxsZWdybzphcGk6c2FsZTpvZmZlcnM6cmVhZCIsImFsbGVncm86YXBpOm9yZGVyczp3cml0ZSIsImFsbGVncm86YXBpOmFkcyIsImFsbGVncm86YXBpOnBheW1lbnRzOndyaXRlIiwiYWxsZWdybzphcGk6c2FsZTpzZXR0aW5nczp3cml0ZSIsImFsbGVncm86YXBpOnByb2ZpbGU6cmVhZCIsImFsbGVncm86YXBpOnJhdGluZ3MiLCJhbGxlZ3JvOmFwaTpzYWxlOnNldHRpbmdzOnJlYWQiLCJhbGxlZ3JvOmFwaTpwYXltZW50czpyZWFkIl0sImFsbGVncm9fYXBpIjp0cnVlfQ.kzS8zuLW5UpKPGrs67FfvZ9sbhlrJkB8bUnyTnQ5r6MaM6mrLb3EIX_sluQcSRN5KdA7A1Fdw73x4BV_2epM9MwMMeB20ISHFM8XNuxU1BIHICguCQg33Civa0KOxS9NHSkxXETeoGGMR3QVpclSc0ey7gXE6v1dbQv-Wab5eNYW1th4ivdDLFl1MTJh-Qdxj6EvW0L9lDzBHinxszGscT3Asa_Hr2iup4qCNiuJhCQt1VfOux061Csw9nt5rRGWmDLPU3j0qamxjWzpUW_VVh40DGHeb6Bu1Vzf7L48G2sn5adrId0MAbINtsRfc1ScFw9HRs0LFgEtMEumYqYbYw",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic base64(62db18a89fcb42c5989ed742644a4845:kDt6pKyvdRAxyTWsYWyh0QI04tDmzpB5UiomWiu4KMnZPf35GcytoCAPeHReNbYW)",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "client_id=62db18a89fcb42c5989ed742644a484///",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://allegro.pl/auth/oauth/device",
+					"protocol": "https",
+					"host": [
+						"allegro",
+						"pl"
+					],
+					"path": [
+						"auth",
+						"oauth",
+						"device"
+					]
+				},
+				"description": "."
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.allegro.pl/sale/categories",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/vnd.allegro.public.v1+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTEzOTk4OTAsInVzZXJfbmFtZSI6IjY2ODU2NTIiLCJqdGkiOiJmZDY0ZDU0Yy03ZDgwLTQ1OGEtYmNkNy01NmQwNWM3ZDY4YjMiLCJjbGllbnRfaWQiOiIyYzU4NTZhYmFkNWY0ZGFmYTBiZmM4MjJmNDFkNWY5YiIsInNjb3BlIjpbImFsbGVncm86YXBpOm9yZGVyczpyZWFkIiwiYWxsZWdybzphcGk6cHJvZmlsZTp3cml0ZSIsImFsbGVncm86YXBpOnNhbGU6b2ZmZXJzOndyaXRlIiwiYWxsZWdybzphcGk6YmlsbGluZzpyZWFkIiwiYWxsZWdybzphcGk6Y2FtcGFpZ25zIiwiYWxsZWdybzphcGk6ZGlzcHV0ZXMiLCJhbGxlZ3JvOmFwaTpiaWRzIiwiYWxsZWdybzphcGk6c2FsZTpvZmZlcnM6cmVhZCIsImFsbGVncm86YXBpOm9yZGVyczp3cml0ZSIsImFsbGVncm86YXBpOmFkcyIsImFsbGVncm86YXBpOnBheW1lbnRzOndyaXRlIiwiYWxsZWdybzphcGk6c2FsZTpzZXR0aW5nczp3cml0ZSIsImFsbGVncm86YXBpOnByb2ZpbGU6cmVhZCIsImFsbGVncm86YXBpOnJhdGluZ3MiLCJhbGxlZ3JvOmFwaTpzYWxlOnNldHRpbmdzOnJlYWQiLCJhbGxlZ3JvOmFwaTpwYXltZW50czpyZWFkIl0sImFsbGVncm9fYXBpIjp0cnVlfQ.kzS8zuLW5UpKPGrs67FfvZ9sbhlrJkB8bUnyTnQ5r6MaM6mrLb3EIX_sluQcSRN5KdA7A1Fdw73x4BV_2epM9MwMMeB20ISHFM8XNuxU1BIHICguCQg33Civa0KOxS9NHSkxXETeoGGMR3QVpclSc0ey7gXE6v1dbQv-Wab5eNYW1th4ivdDLFl1MTJh-Qdxj6EvW0L9lDzBHinxszGscT3Asa_Hr2iup4qCNiuJhCQt1VfOux061Csw9nt5rRGWmDLPU3j0qamxjWzpUW_VVh40DGHeb6Bu1Vzf7L48G2sn5adrId0MAbINtsRfc1ScFw9HRs0LFgEtMEumYqYbYw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.allegro.pl/sale/categories/6061",
+					"protocol": "https",
+					"host": [
+						"api",
+						"allegro",
+						"pl"
+					],
+					"path": [
+						"sale",
+						"categories",
+						"6061"
+					]
+				},
+				"description": "."
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.allegro.pl/sale/categories/byId",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/vnd.allegro.public.v1+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTEzOTk4OTAsInVzZXJfbmFtZSI6IjY2ODU2NTIiLCJqdGkiOiJmZDY0ZDU0Yy03ZDgwLTQ1OGEtYmNkNy01NmQwNWM3ZDY4YjMiLCJjbGllbnRfaWQiOiIyYzU4NTZhYmFkNWY0ZGFmYTBiZmM4MjJmNDFkNWY5YiIsInNjb3BlIjpbImFsbGVncm86YXBpOm9yZGVyczpyZWFkIiwiYWxsZWdybzphcGk6cHJvZmlsZTp3cml0ZSIsImFsbGVncm86YXBpOnNhbGU6b2ZmZXJzOndyaXRlIiwiYWxsZWdybzphcGk6YmlsbGluZzpyZWFkIiwiYWxsZWdybzphcGk6Y2FtcGFpZ25zIiwiYWxsZWdybzphcGk6ZGlzcHV0ZXMiLCJhbGxlZ3JvOmFwaTpiaWRzIiwiYWxsZWdybzphcGk6c2FsZTpvZmZlcnM6cmVhZCIsImFsbGVncm86YXBpOm9yZGVyczp3cml0ZSIsImFsbGVncm86YXBpOmFkcyIsImFsbGVncm86YXBpOnBheW1lbnRzOndyaXRlIiwiYWxsZWdybzphcGk6c2FsZTpzZXR0aW5nczp3cml0ZSIsImFsbGVncm86YXBpOnByb2ZpbGU6cmVhZCIsImFsbGVncm86YXBpOnJhdGluZ3MiLCJhbGxlZ3JvOmFwaTpzYWxlOnNldHRpbmdzOnJlYWQiLCJhbGxlZ3JvOmFwaTpwYXltZW50czpyZWFkIl0sImFsbGVncm9fYXBpIjp0cnVlfQ.kzS8zuLW5UpKPGrs67FfvZ9sbhlrJkB8bUnyTnQ5r6MaM6mrLb3EIX_sluQcSRN5KdA7A1Fdw73x4BV_2epM9MwMMeB20ISHFM8XNuxU1BIHICguCQg33Civa0KOxS9NHSkxXETeoGGMR3QVpclSc0ey7gXE6v1dbQv-Wab5eNYW1th4ivdDLFl1MTJh-Qdxj6EvW0L9lDzBHinxszGscT3Asa_Hr2iup4qCNiuJhCQt1VfOux061Csw9nt5rRGWmDLPU3j0qamxjWzpUW_VVh40DGHeb6Bu1Vzf7L48G2sn5adrId0MAbINtsRfc1ScFw9HRs0LFgEtMEumYqYbYw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.allegro.pl/sale/categories/6061",
+					"protocol": "https",
+					"host": [
+						"api",
+						"allegro",
+						"pl"
+					],
+					"path": [
+						"sale",
+						"categories",
+						"6061"
+					]
+				},
+				"description": "."
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.allegro.pl/sale/categories/ID/paremeters",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/vnd.allegro.public.v1+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTEzOTk4OTAsInVzZXJfbmFtZSI6IjY2ODU2NTIiLCJqdGkiOiJmZDY0ZDU0Yy03ZDgwLTQ1OGEtYmNkNy01NmQwNWM3ZDY4YjMiLCJjbGllbnRfaWQiOiIyYzU4NTZhYmFkNWY0ZGFmYTBiZmM4MjJmNDFkNWY5YiIsInNjb3BlIjpbImFsbGVncm86YXBpOm9yZGVyczpyZWFkIiwiYWxsZWdybzphcGk6cHJvZmlsZTp3cml0ZSIsImFsbGVncm86YXBpOnNhbGU6b2ZmZXJzOndyaXRlIiwiYWxsZWdybzphcGk6YmlsbGluZzpyZWFkIiwiYWxsZWdybzphcGk6Y2FtcGFpZ25zIiwiYWxsZWdybzphcGk6ZGlzcHV0ZXMiLCJhbGxlZ3JvOmFwaTpiaWRzIiwiYWxsZWdybzphcGk6c2FsZTpvZmZlcnM6cmVhZCIsImFsbGVncm86YXBpOm9yZGVyczp3cml0ZSIsImFsbGVncm86YXBpOmFkcyIsImFsbGVncm86YXBpOnBheW1lbnRzOndyaXRlIiwiYWxsZWdybzphcGk6c2FsZTpzZXR0aW5nczp3cml0ZSIsImFsbGVncm86YXBpOnByb2ZpbGU6cmVhZCIsImFsbGVncm86YXBpOnJhdGluZ3MiLCJhbGxlZ3JvOmFwaTpzYWxlOnNldHRpbmdzOnJlYWQiLCJhbGxlZ3JvOmFwaTpwYXltZW50czpyZWFkIl0sImFsbGVncm9fYXBpIjp0cnVlfQ.kzS8zuLW5UpKPGrs67FfvZ9sbhlrJkB8bUnyTnQ5r6MaM6mrLb3EIX_sluQcSRN5KdA7A1Fdw73x4BV_2epM9MwMMeB20ISHFM8XNuxU1BIHICguCQg33Civa0KOxS9NHSkxXETeoGGMR3QVpclSc0ey7gXE6v1dbQv-Wab5eNYW1th4ivdDLFl1MTJh-Qdxj6EvW0L9lDzBHinxszGscT3Asa_Hr2iup4qCNiuJhCQt1VfOux061Csw9nt5rRGWmDLPU3j0qamxjWzpUW_VVh40DGHeb6Bu1Vzf7L48G2sn5adrId0MAbINtsRfc1ScFw9HRs0LFgEtMEumYqYbYw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.allegro.pl/sale/categories/6061/parameters",
+					"protocol": "https",
+					"host": [
+						"api",
+						"allegro",
+						"pl"
+					],
+					"path": [
+						"sale",
+						"categories",
+						"6061",
+						"parameters"
+					]
+				},
+				"description": "."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

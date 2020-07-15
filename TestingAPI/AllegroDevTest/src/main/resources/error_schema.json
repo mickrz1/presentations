@@ -1,0 +1,11 @@
+{
+  "errors": [
+    {
+      "code": "NotAcceptableException",
+      "details": null,
+      "message": "Not acceptable representation requested. Please check 'Accept' request header",
+      "path": null,
+      "userMessage": "The request contains incorrect data. Contact the author of the application."
+    }
+  ]
+}
